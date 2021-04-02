@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+  
+  <title>JavaScript-Shorthand | Vladimir&#39;s cheatsheets</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <!-- <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav> -->
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/JavaScript-Shorthand.md'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<article id="post-JavaScript-Shorthand" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> JavaScript-Shorthand <em>cheatSheets</em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="Declaring-variables"><a href="#Declaring-variables" class="headerlink" title="Declaring variables"></a>Declaring variables</h3><pre><code class="language-js">
+// Longhand
+let x;   
+let y = 20;   
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let x, y = 20;   
+</code></pre>
+<h3 id="Assigning-values-to-multiple-variables"><a href="#Assigning-values-to-multiple-variables" class="headerlink" title="Assigning values to multiple variables"></a>Assigning values to multiple variables</h3><pre><code class="language-js">// Longhand
+let a, b, c; 
+a = 5; 
+b = 8; 
+c = 12;
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let [a, b, c] = [5, 8, 12];
+</code></pre>
+<h3 id="The-Ternary-operator"><a href="#The-Ternary-operator" class="headerlink" title="The Ternary operator"></a>The Ternary operator</h3><pre><code class="language-js">// Longhand
+let result; 
+let marks = GetNumber(); 
+if(marks &gt;= 56)&#123;
+ result = &#39;Pass&#39;; 
+&#125;else&#123; 
+ result = &#39;Fail&#39;; 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let result = GetNumber() &gt;= 56 ? &#39;Pass&#39; : &#39;Fail&#39;; 
+</code></pre>
+<h3 id="AND-amp-amp-Short-circuit-evaluation"><a href="#AND-amp-amp-Short-circuit-evaluation" class="headerlink" title="AND(&amp;&amp;) Short circuit evaluation"></a>AND(&amp;&amp;) Short circuit evaluation</h3><pre><code class="language-js">// Longhand
+if (isLoggedin) &#123;
+ goToHomepage(); 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+isLoggedin &amp;&amp; goToHomepage();
+</code></pre>
+<h3 id="Swap-two-variables"><a href="#Swap-two-variables" class="headerlink" title="Swap two variables"></a>Swap two variables</h3><pre><code class="language-js">let x = &#39;Hello&#39;, y = 55; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+const temp = x; 
+x = y; 
+y = temp; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+[x, y] = [y, x];
+</code></pre>
+<h3 id="Assigning-default-value"><a href="#Assigning-default-value" class="headerlink" title="Assigning default value"></a>Assigning default value</h3><pre><code class="language-js">// Longhand
+let imagePath; 
+let path = getImagePath(); 
+if(path !== null &amp;&amp; path !== undefined) &#123; 
+  imagePath = path; 
+&#125; else &#123; 
+  imagePath = &#39;default.jpg&#39;; 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let imagePath = getImagePath() || &#39;default.jpg&#39;;
+</code></pre>
+<h3 id="Arrow-Function"><a href="#Arrow-Function" class="headerlink" title="Arrow Function"></a>Arrow Function</h3><pre><code class="language-js">// Longhand
+function add(num1, num2) &#123; 
+   return num1 + num2; 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+const add = (num1, num2) =&gt; num1 + num2;
+</code></pre>
+<p>Reference: <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">JavaScript Arrow function</a></p>
+<h3 id="Object-Property-Assignment"><a href="#Object-Property-Assignment" class="headerlink" title="Object Property Assignment"></a>Object Property Assignment</h3><pre><code class="language-js">let firstname = &#39;John&#39;;
+let lastname = &#39;Doe&#39;;
+</code></pre>
+<pre><code class="language-js">// Longhand
+let obj = &#123;firstname: firstname,
+           lastname: lastname&#125;;
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let obj = &#123;firstname, lastname&#125;;
+</code></pre>
+<h3 id="Multi-line-String"><a href="#Multi-line-String" class="headerlink" title="Multi-line String"></a>Multi-line String</h3><pre><code class="language-js">// Longhand
+console.log(&#39;JavaScript, often abbreviated\n&#39; +
+&#39;as JS, is a programming language that \n&#39; + 
+&#39;conforms to the ECMAScript specification. \n&#39; + 
+&#39;JavaScript is high-level, often \n&#39; + 
+&#39;just-in-time compiled, and multi-paradigm.&#39; ); 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+console.log(`JavaScript, often abbreviated 
+as JS, is a programming language that 
+conforms to the ECMAScript specification. 
+JavaScript is high-level, often 
+just-in-time compiled, and multi-paradigm.`);
+</code></pre>
+<h3 id="String-into-a-Number"><a href="#String-into-a-Number" class="headerlink" title="String into a Number"></a>String into a Number</h3><pre><code class="language-js">// Longhand
+let total = parseInt(&#39;453&#39;);
+let average = parseFloat(&#39;42.6&#39;);
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let total = +&#39;453&#39;; 
+let average = +&#39;42.6&#39;;
+</code></pre>
+<h3 id="Double-NOT-bitwise-operator"><a href="#Double-NOT-bitwise-operator" class="headerlink" title="Double NOT bitwise operator (~~)"></a>Double NOT bitwise operator (~~)</h3><pre><code class="language-js">// Longhand
+const floor = Math.floor(6.8); // 6 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+const floor = ~~6.8; // 6
+</code></pre>
+<p>Reference: <a target="_blank" rel="noopener" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor">Math.floor()</a></p>
+<h3 id="Repeat-a-string-for-multiple-times"><a href="#Repeat-a-string-for-multiple-times" class="headerlink" title="Repeat a string for multiple times"></a>Repeat a string for multiple times</h3><pre><code class="language-js">// Longhand
+let str = &#39;&#39;; 
+for(let i = 0; i &lt; 5; i ++) &#123; 
+  str += &#39;Hello &#39;; 
+&#125; 
+console.log(str); // Hello Hello Hello Hello Hello 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+&#39;Hello &#39;.repeat(5);
+</code></pre>
+<h3 id="Find-max-and-min-number-in-array"><a href="#Find-max-and-min-number-in-array" class="headerlink" title="Find max and min number in array"></a>Find max and min number in array</h3><pre><code class="language-js">const arr = [2, 8, 15, 4]; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+let min = 100, max = 0
+for(let i = 0; i &lt; arr.length ; i ++) &#123; 
+  if(i &gt;= max)&#123;
+    max = i;
+  &#125;
+  if(i &lt;= min)&#123;
+    min = i;
+  &#125;
+&#125;
+</code></pre>
+<pre><code class="language-js">// Shorthand
+Math.max(...arr); // 15 
+Math.min(...arr); // 2
+</code></pre>
+<h3 id="For-loop"><a href="#For-loop" class="headerlink" title="For loop"></a>For loop</h3><pre><code class="language-js">let arr = [10, 20, 30, 40]; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+for (let i = 0; i &lt; arr.length; i++) &#123; 
+  console.log(arr[i]); 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+for (const val of arr) &#123; 
+  console.log(val); 
+&#125;
+</code></pre>
+<pre><code class="language-js">// Shorthand
+for (const index in arr) &#123; 
+  console.log(`index: $&#123;index&#125;,
+               value: $&#123;arr[index]&#125;`); 
+&#125;
+</code></pre>
+<h3 id="Template-Literals"><a href="#Template-Literals" class="headerlink" title="Template Literals"></a>Template Literals</h3><pre><code class="language-js">// Longhand
+console.log(&#39;Call from &#39; + number + &#39; at &#39; + time);
+</code></pre>
+<pre><code class="language-js">// Shorthand
+console.log(`Call from $&#123;number&#125; at $&#123;time&#125;`);
+</code></pre>
+<h3 id="Get-character-from-string"><a href="#Get-character-from-string" class="headerlink" title="Get character from string"></a>Get character from string</h3><pre><code class="language-js">let str = &#39;Hello world&#39;; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+str.charAt(2); // e
+</code></pre>
+<pre><code class="language-js">// Shorthand
+str[2]; // e
+</code></pre>
+<h3 id="Exponent-Power"><a href="#Exponent-Power" class="headerlink" title="Exponent Power"></a>Exponent Power</h3><pre><code class="language-js">// Longhand
+const power = Math.pow(4, 3); // 64 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+const power = 4**3; // 64
+</code></pre>
+<h3 id="Merging-of-arrays"><a href="#Merging-of-arrays" class="headerlink" title="Merging of arrays"></a>Merging of arrays</h3><pre><code class="language-js">let arr = [20, 30]; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+let arr2 = arr.concat([60, 80]); 
+// [20, 30, 60, 80] 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+let arr2 = [...arr, 60, 80]; 
+// [20, 30, 60, 80]
+</code></pre>
+<h3 id="Loop-in-object"><a href="#Loop-in-object" class="headerlink" title="Loop in object"></a>Loop in object</h3><pre><code class="language-js">let obj = &#123;x: 20, y: 50&#125;;
+</code></pre>
+<pre><code class="language-js">// Longhand
+const objectArray = Object.keys(obj);
+for (let i = 0; i &lt; objectArray.length; i++) &#123; 
+  console.log(obj[objectArray[i]]); 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+for (const key in obj) &#123; 
+  console.log(obj[key]); 
+&#125;
+</code></pre>
+<h3 id="Multiple-condition-checking"><a href="#Multiple-condition-checking" class="headerlink" title="Multiple condition checking"></a>Multiple condition checking</h3><pre><code class="language-js">// Longhand
+if (value === 1 ||
+    value === &#39;one&#39; ||
+    value === 2 || 
+    value === &#39;two&#39;) &#123; 
+     // Execute some code 
+&#125; 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+if ([1, &#39;one&#39;, 2, &#39;two&#39;].indexOf(value) &gt;= 0) &#123; 
+    // Execute some code 
+&#125;
+</code></pre>
+<pre><code class="language-js">// Shorthand
+if ([1, &#39;one&#39;, 2, &#39;two&#39;].includes(value)) &#123; 
+    // Execute some code 
+&#125;
+</code></pre>
+<h3 id="Deep-cloning-of-multi-level-object"><a href="#Deep-cloning-of-multi-level-object" class="headerlink" title="Deep cloning of multi-level object"></a>Deep cloning of multi-level object</h3><pre><code class="language-js">let obj = &#123;x: 20, y: &#123;z: 30&#125;&#125;; 
+</code></pre>
+<pre><code class="language-js">// Longhand
+const makeDeepClone = (obj) =&gt; &#123; 
+  let newObject = &#123;&#125;; 
+  Object.keys(obj).map(key =&gt; &#123; 
+    if(typeof obj[key] === &#39;object&#39;)&#123; 
+      newObject[key] = makeDeepClone(obj[key]); 
+    &#125; else &#123; 
+      newObject[key] = obj[key]; 
+    &#125; 
+  &#125;); 
+ return newObject; 
+&#125; 
+const cloneObj = makeDeepClone(obj); 
+</code></pre>
+<pre><code class="language-js">// Shorthand
+const cloneObj = JSON.parse(JSON.stringify(obj));
+</code></pre>
+<pre><code class="language-js">//Shorthand for single level object
+let obj = &#123;x: 20, y: &#39;hello&#39;&#125;;
+const cloneObj = &#123;...obj&#125;;
+</code></pre>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+<section id="comments" class="body-area">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    
+<script>
+  var disqus_shortname = 'my-blog-eixhpjlbsm';
+  
+  var disqus_url = 'https://vladislu.github.io/cheatsheet/2021/03/26/JavaScript-Shorthand/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>
