@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KK5V52D8L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9KK5V52D8L');
+</script>
+
+
+  
+  <title>Angular | Vladimir&#39;s cheatsheets</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <!-- <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav> -->
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/Angular.md'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<article id="post-Angular" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> Angular <em>cheatsheet</em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="Angular-CLI-init"><a href="#Angular-CLI-init" class="headerlink" title="Angular CLI init"></a>Angular CLI init</h3><p>This command will install the Angular CLI<br><code>npm install -g @angular/cli</code></p>
+<hr>
+<p>Setup a new Angular application<br><code>ng new &lt;application name&gt;</code></p>
+<hr>
+<p>All available Angular command list<br><code>ng new --help</code></p>
+<hr>
+<p>Checks application for any linting warnings<br><code>ng lint &lt;application name&gt;</code></p>
+<hr>
+<p>Fix linting errors.<br><code>ng lint &lt;application name&gt; --fix</code></p>
+<hr>
+<p>Formats our entire codebase<br><code>ng lint &lt;application name&gt; --format stylish</code></p>
+<hr>
+<p>Download new dependencies and update the project.<br><code>ng add &lt;package name&gt;</code></p>
+<hr>
+<h3 id="Angular-CLI-generate"><a href="#Angular-CLI-generate" class="headerlink" title="Angular CLI generate"></a>Angular CLI generate</h3><p>Create a new component on our application.<br><code>ng generate component &lt;name&gt;</code> / <code>ng g c &lt;name&gt;</code></p>
+<hr>
+<p>Create a new directive on our application.<br><code>ng generate directive &lt;name&gt;</code> / <code>ng g d &lt;name&gt;</code></p>
+<hr>
+<p>Creates a new class based service.<br><code>ng generate service &lt;name&gt;</code> / <code>ng g s &lt;name&gt;</code></p>
+<hr>
+<p>Creates a new pipe.<br><code>ng generate pipe &lt;name&gt;</code> / <code>ng g p &lt;name&gt;</code></p>
+<hr>
+<p>Creates a new class in the specified<br><code>ng generate class &lt;name&gt;</code> / <code>ng g c &lt;destination&gt;</code></p>
+<hr>
+<p>Builds application for production in dist directory.<br><code>ng build</code></p>
+<hr>
+<p>Serves the application and open in a browser.<br><code>ng serve -o</code></p>
+<hr>
+<p>Serves the application using ssl.<br><code>ng serve -ssl</code></p>
+<h3 id="Angular-Lifecycle-Hooks"><a href="#Angular-Lifecycle-Hooks" class="headerlink" title="Angular Lifecycle Hooks"></a>Angular Lifecycle Hooks</h3><pre><code class="language-js">// Called whenever one of input properties change.
+ngOnChanges() - `before ngOnInit()`
+</code></pre>
+<pre><code class="language-js">// Called once after ngOnChanges is completed.
+ngOnInit() - `after the first ngOnChanges()`
+</code></pre>
+<pre><code class="language-js">// Whenever a change detection is ran.
+ngDoCheck() - `after ngOnChanges()`
+</code></pre>
+<pre><code class="language-js">// After performs any content projection into view.
+ngAfterContentInit() - `after ngDoCheck()`
+</code></pre>
+<pre><code class="language-js">// After checks the content projected
+// into the directive or component.
+ngAfterContentChecked()
+ - `after ngAfterContentInit()`
+</code></pre>
+<pre><code class="language-js">// When component’s view has been fully initialized
+ngAfterViewInit()
+ - `once after ngAfterContentChecked()`
+</code></pre>
+<pre><code class="language-js">// view of the given component has been checked
+// by the change detection.
+ngAfterViewChecked()
+ - `after ngAfterContentChecked()`
+</code></pre>
+<pre><code class="language-js">// Before angular destroys a directive or component
+ngOnDestroy()
+</code></pre>
+<p>Reference: <a target="_blank" rel="noopener" href="https://angular.io/guide/lifecycle-hooks">Lifecycle hooks</a></p>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+<section id="comments" class="body-area">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    
+<script>
+  var disqus_shortname = 'my-blog-eixhpjlbsm';
+  
+  var disqus_url = 'https://vladislu.github.io/2021/03/26/Angular/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>

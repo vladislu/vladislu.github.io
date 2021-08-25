@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9KK5V52D8L"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9KK5V52D8L');
+</script>
+
+
+  
+  <title>Css components | Vladimir&#39;s cheatsheets</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <!-- <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav> -->
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Edit Page'>
+              <a target="_blank" rel="noopener" href='https://github.com/vladislu/cheatsheet-posts/blob/master/Css-components'> 
+                <span class='text -visible'>Edit Page</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+
+<article id="post-Css-components" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> Css components <em>cheatSheets</em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h2 id="Css-components"><a href="#Css-components" class="headerlink" title="Css components"></a>Css components</h2><h3 id="checkbox"><a href="#checkbox" class="headerlink" title="checkbox"></a>checkbox</h3><pre><code class="language-js">input[type=&quot;checkbox&quot;]:checked + label::after &#123;
+  content: &quot;&quot;;
+  position: absolute;
+  width: 1.3ex;
+  height: 0.4ex;
+  background: rgba(0, 0, 0, 0);
+  top: 0.9ex;
+  left: 0.4ex;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+&#125;
+
+input[type=&quot;checkbox&quot;]:checked + label::before &#123;
+  content: &quot;&quot;;
+  background: #030000;
+&#125;
+
+input[type=&quot;checkbox&quot;]:disabled + label::before &#123;
+  content: &quot;&quot;;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
+&#125;
+
+input[type=&quot;checkbox&quot;] &#123;
+  line-height: 2.1ex;
+&#125;
+
+input[type=&quot;checkbox&quot;] &#123;
+  position: absolute;
+  left: -999em;
+&#125;
+
+input[type=&quot;checkbox&quot;] + label &#123;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+&#125;
+
+input[type=&quot;checkbox&quot;] + label::before &#123;
+  content: &quot;&quot;;
+  display: inline-block;
+  vertical-align: -41%;
+  height: 16px;
+  width: 16px;
+  background-color: white;
+  box-sizing: border-box;
+  border: 1px solid #8c8c8c;
+  border-radius: 2px;
+  margin: 8px 0.5em 3px 0px;
+&#125;
+</code></pre>
+<h3 id="radio-button"><a href="#radio-button" class="headerlink" title="radio button"></a>radio button</h3><pre><code class="language-js">input[type=&quot;radio&quot;] + label &#123;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+&#125;
+
+input[type=&quot;radio&quot;] &#123;
+  display: none;
+&#125;
+
+input[type=&quot;radio&quot;] + label::before &#123;
+  content: &quot; &quot;;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 2px 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 16px;
+  border: 1px solid #080000;
+  background-color: transparent;
+&#125;
+
+input[type=&quot;radio&quot;]:checked + label::after &#123;
+  border-radius: 16px;
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  content: &quot; &quot;;
+  display: block;
+  background: #030000;
+&#125;
+</code></pre>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+<section id="comments" class="body-area">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    
+<script>
+  var disqus_shortname = 'my-blog-eixhpjlbsm';
+  
+  var disqus_url = 'https://vladislu.github.io/2021/08/24/Css-components/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+  </div>
+
+</body>
+</html>
